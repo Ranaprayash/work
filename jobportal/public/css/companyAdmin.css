@@ -1,246 +1,265 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-@import url('href="https://fonts.googleapis.com/css?family=Tangerine">');
-
+/* General styles */
 body {
-  font-family: "poppins";
-  background-image: url("/static/images/bgimage.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* filter: blur(5px); */
-}
-
-
-.h1AndBars {
-  margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.h1AndBars h1 {
-  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: black;
   margin: 0;
-  flex-grow: 1;
-}
-
-.h1AndBars span {
-  margin-right: 10px;
-}
-.h1AndBars span i {
-  font-size: 30px;
-  margin-left: 30px;
-}
-
-.openNav {
-  position: absolute;
-  top: 20px;
-  margin: 20px;
-  font-size: 50px;
-}
-
-.sidenav {
-  height: 100%;
-  width: 180px;
-  margin-top: 76px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
-  background-color: #291818e7;
-  padding-top: 60px;
-  transition: 0.5s;
-}
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 30px;
-  margin-left: 40px;
-  color: white;
-  cursor: pointer;
-}
-
-#main {
-  transition: margin-left 0.5s;
-  padding: 20px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-    font-size: 10px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-
-.sidenav button.btn-success {
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  font-size: 10px;
-}
-
-.mb-3 input {
-  width: 25rem;
-  border-color: rgba(44, 44, 149, 0.758);
-}
-
-.jobContainer h1 {
-  font-family: "Tangerine", serif;
-  font-size: 50px;
-  text-shadow: 4px 5px 5px #aaa;
-  text-align: center;
-  font-style: italic;
-}
-
-.jobContainer {
-  display: none;
-  width: 30rem;
-  height: 35rem;
-  margin-left: 30%;
-  border: 1px solid black;
+  padding: 0;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  box-shadow: 4px 5px 5px gray;
-  border-radius: 10px;
-}
-
-.jobContainer .btn-primary {
-  width: 100px;
-  margin-left: 150px;
-  margin-top: 30px;
-}
-
-.icon-close {
-  position: relative;
-  left: 100%;
-  width: 35px;
-  height: 35px;
-  background: #305d7f;
-  font-size: 1.5em;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 999;
-  box-shadow: 4px 5px 5px gray;
-} 
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-
-
-.companyDetails {
-  color: rgb(19, 4, 4);
-  padding: 10px;
-  border-radius: 10px;
-  text-align: left;
-}
-
-.companyDetails h2 {
-  margin-top: 30px;
-  text-align: center;
-  line-height: 1;
-}
-
-.companyCard button a {
-  text-decoration: none;
-  color: whitesmoke;
-}
-
-.companyFormContainer {
-  display: none;
-  margin-top: 20px;
-  margin-bottom: 70px;
-  position: relative;
-}
-
-.updateDetails {
-  margin-bottom: 10px;
-}
-
-
-.companyCard {
-  position: absolute;
-  display: none;
-  width: 23rem;
-  height: auto; 
-  background-color: burlywood;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
   text-align: center;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 5px 10px 10px gray;
-  margin-bottom: 150px;
-  top: 50px;
-  right: 50px;
+}
+.dd{
+  margin-right: 800px;
+  color: #0056b3 !important;
 }
 
-
-.companyCard .icon-close {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -20px;
-  right: 10px;
-  width: 40px;
-  height: 40px;
-  font-size: 1.5em;
-  color: white;
-  border-radius: 50%;
-  cursor: pointer;
-  z-index: 1;
-  box-shadow: 5px 8px 8px gray;
+/* Side navigation bar styles */
+.sidenav {
+  height: 100%;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #343a40;
+  padding-top: 20px;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
+  z-index: 1000;
 }
 
-
-.logout {
-  position: absolute; 
-  top: 250px;
-  left: 20px;
-  
+.sidenav.open {
+  transform: translateX(0);
 }
 
-.logout button a{
+.sidenav a {
+  padding: 15px 20px;
   text-decoration: none;
-  color: white;
-}
-
-.logout button{
-  padding: 10px 15px;
-  color: whitesmoke;
-  background-color: rgba(59, 11, 11, 0.945);
-  border: none;
+  font-size: 1.2rem;
+  color: #f8f9fa;
+  display: block;
+  transition: background 0.3s, color 0.3s;
   border-radius: 5px;
 }
 
+.sidenav a:hover {
+  background: #495057;
+  color: #fff;
+}
 
-.logout button:hover,
-.logout button a:hover{
-  background-color: rgba(104, 176, 27, 0.741);
-  color: black;
+.sidenav .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #f8f9fa;
+}
+
+.logout {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+}
+
+.logoutBtn {
+  padding: 10px 20px;
+  background: #dc3545;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoutBtn i {
+  margin-left: 8px;
+}
+
+/* Form container styles */
+.companyFormContainer {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.jobContainer {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.companyFormContainer h1 {
+  margin-bottom: 20px;
+  color: #343a40;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.companyFormContainer .mb-3 {
+  margin-bottom: 20px;
+}
+
+.companyFormContainer .form-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.companyFormContainer .form-control,
+.companyFormContainer .form-select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.companyFormContainer .form-control:focus,
+.companyFormContainer .form-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.companyFormContainer .btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  border: none;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.companyFormContainer .btn:hover {
+  background: #0056b3;
+}
+
+/* Company profile card styles */
+.companyCard {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.companyDetails {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+}
+
+.companyDetails h2 {
+  margin: 0 0 15px;
+  font-size: 2rem;
+  color: #007bff;
+}
+
+.companyDetails p {
+  margin: 8px 0;
+  color: #495057;
+  font-size: 1.1rem;
+}
+
+.updateDetails {
+  margin-top: 20px;
+}
+
+.updateDetails .btn {
+  background: #007bff;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.updateDetails .btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.updateDetails .btn:hover {
+  background: #0056b3;
+}
+
+.updateDetails .btn:hover a {
+  text-decoration: underline;
+}
+
+/* Close icon styles */
+.icon-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #343a40;
+  transition: color 0.3s;
+}
+
+.icon-close:hover {
+  color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .sidenav {
+      width: 200px;
+  }
+
+  .sidenav a {
+      font-size: 1rem;
+  }
+
+  .companyFormContainer .jobContainer,
+  .companyCard .companyDetails {
+      width: 95%;
+      max-width: none;
+  }
+
+  .companyFormContainer .btn,
+  .updateDetails .btn {
+      font-size: 1rem;
+  }
 }

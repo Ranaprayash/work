@@ -12,7 +12,7 @@
 
 
     <div class="h1AndBars">
-        <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+        {{!-- <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span> --}}
         <h1>Welcome {{company.company_name}}</h1>
     </div>
 
@@ -20,7 +20,7 @@
     {{#if addedJob}}
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>{{addedJob}}</strong>
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">cdsd</button>
     </div>
     {{/if}}
 
@@ -82,7 +82,7 @@
 
 
     <div class="companyCard" id="companyCard">
-        <span class="icon-close"><i onclick="closeProfile()" id="close" class="fa-solid fa-x"></i></span>
+        <span class="icon-close dd"><i onclick="closeProfile()" id="close" class="fa-solid fa-x"></i></span>
         <div class="companyDetails">
             <h2><strong>{{company.company_name}}</strong></h2>
             <p>Email: {{company.email}}</p>
@@ -91,9 +91,9 @@
             <p>Location: {{company.location}}</p>
             <p>Description: {{company.description}}</p>
         </div>
-        <div class="updateDetails">
+        {{!-- <div class="updateDetails">
             <button class="btn btn-primary"><a href="#">Update Profile</a></button>
-        </div>
+        </div> --}}
     </div>
 
 

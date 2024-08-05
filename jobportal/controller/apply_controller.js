@@ -14,7 +14,7 @@ const userApplyController = async (req, res)=>{
             const user_id = req.session.auth.id;     
             const applydata = await applyModel.userApplyData(job_id, user_id, company_id)
             if(applydata){
-                req.flash('success', "job applied successfully check your status on Dashboard")
+                req.flash('success', "job applied successfully.")
                 res.redirect('/jobs')
             }
         }else{

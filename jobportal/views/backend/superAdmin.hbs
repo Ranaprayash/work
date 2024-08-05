@@ -15,22 +15,22 @@
 
 <body>
     <header>
-        <div id="sideNavBar" class="sidenav">
-            <a class="closebtn" onclick="closeNav()">&times;</a>
+        <div id="NavBar" class="nav">
+            {{!-- <a class="closebtn" onclick="closeNav()">&times;</a> --}}
             <a href="/backend/superAdmin/addCompany">Add Company</a>
             <a href="/backend/superAdmin/user">View Users</a>
             <a href="/backend/superAdmin/companies">View Companies</a>
-            <a href="/backend/superAdmin/jobsInfo">Jobs Info</a>
-            <a href="/">Go Back</a>
+            <a href="/backend/superAdmin/jobsInfo">Jobs Details</a>
+            <a href="/">Log Out</a>
         </div>
-        <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
+        {{!-- <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span> --}}
         <span class="search-container">
             <input type="search" class="search" name="search" placeholder="Search">
             <i class="fa-solid fa-magnifying-glass"></i>
         </span>
 
         <div class="other-icons">
-            <span><i class="fa-solid fa-envelope"></i></span>
+            {{!-- <span><i class="fa-solid fa-envelope"></i></span> --}}
             <span><i class="fa-regular fa-bell"></i></span>
         </div>
        
@@ -51,7 +51,7 @@
         <div class="dashboard-icon">
             <img src="/static/images/users.png" alt="User Icon">
         </div>
-        <p class="counter"></p>
+        {{!-- <p class="counter"></p> --}}
 <p>{{ totalUsers }}</p>
         <p>Total Users</p>
     </div>
@@ -59,14 +59,16 @@
         <div class="dashboard-icon">
             <img src="/static/images/company.webp" alt="Company Icon">
         </div>
-        <p class="counter" data-target="{{ totalCompanies }}"></p> <p>{{ totalCompanies }}</p>
+        {{!-- <p class="counter" data-target="{{ totalCompanies }}"></p> --}}
+         <p>{{ totalCompanies }}</p>
         <p>Total Companies</p>
     </div>
     <div class="dashboard-item animated">
         <div class="dashboard-icon">
             <img src="/static/images/job.png" alt="Job Icon">
         </div>
-        <p class="counter" data-target="{{ totalPostedJobs }}"></p><p>{{ totalPostedJobs }}</p>
+        {{!-- <p class="counter" data-target="{{ totalPostedJobs }}"></p> --}}
+        <p>{{ totalPostedJobs }}</p>
         <p>Total Posted Jobs</p>
     </div>
 </section>
